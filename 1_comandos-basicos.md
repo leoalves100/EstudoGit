@@ -63,6 +63,9 @@ $ git checkout nome
 
 #Cria/Entra
 $ git checkout -b nome
+
+#União de ramos
+$ git merge RamoSecundário
 ```
 &nbsp;
 
