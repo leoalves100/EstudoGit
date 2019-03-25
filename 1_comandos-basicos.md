@@ -110,6 +110,18 @@ $ git mv arquivo.php arquivo1.php
 
 # Desfazer mudanças
 ```
-#Desfaz alterações não rastreada
-git checkout --arquivo.php
+#Desfaz alterações não rastreada e restaura arquivo deletado
+$ git checkout -- arquivo.php
+
+#Remover da área de stage e mantém as alterações feitas
+#Sem parâmetro remove TUDO da stage
+$ git reset -- arquivo.php
+
+#Remover da área de stage e remove as alterações feitas
+$ git reset --hard
+
+#Reverter um arquivo commitado
+#Passar código do commit anterior ou HEAD como parâmetro
+$ git revert --no-edit xxxxx 
+
 ```
