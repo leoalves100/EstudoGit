@@ -23,6 +23,11 @@ $ git config color.ui true
 
 #Exibir log em apenas uma linha por commit
 $ git config format.pretty oneline
+
+
+#Git é case insensitive Pessoa == PESSOA
+$ git config --global core.ignorecase false
+
 ```
 &nbsp;
 
