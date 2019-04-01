@@ -3,7 +3,7 @@
 1. git git-core git-man git-gui git-doc
 2. ssh openssh-server openssh-client
 
-> Opcionais, para ajudar no gerenciamento de repositório
+> Software opcionais, para ajudar no gerenciamento dos repositórios
 1. Gitkraken
 
 &nbsp;
@@ -35,16 +35,21 @@ $ git config format.pretty oneline
 &nbsp;
 
 > Git é case insensitive Pessoa == PESSOA
-`$ git config --global core.ignorecase false`
+
+
+```
+$ git config --global core.ignorecase false
+
+```
 &nbsp;
 
 > Armazenando senha em cache para conexão **HTTPS**
 
 ```
-# Armazena em cache
+#Armazena em cache
 $ git config --global credential.helper cache
 
-# Define tempo para manter senha em cache em seg
+#Define tempo para manter senha em cache em seg
 $ git config --global credential.helper 'cache --timeout=3600'
 ```
 &nbsp;
