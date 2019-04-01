@@ -1,54 +1,71 @@
-# Configuração inicial
-
-## Softwares necessários
+# Softwares necessários
 
 1. git git-core git-man git-gui git-doc
-1. ssh openssh-server openssh-client
+2. ssh openssh-server openssh-client
 
-## Configurações globais
+> Opcionais, para ajudar no gerenciamento de repositório
+1. Gitkraken
 
+&nbsp;
 
-Configure nome e email
-
+# Configurações globais
 ```
-$ git config --global user.name "Leandro Alves"
-$ git config --global user.email "meuemail@teste.com"
-```
+#Usuário
+$ git config --global user.name "Seu nome"
 
-## Configurando editor
-Editor padrão para escrever commits
-
+#Email
+$ git config --global user.email "seuemail@teste.com"
 ```
-$ git config --global core.editor nomeditor
-```
+&nbsp;
 
-## Armazenando senha em cache para conexão **HTTPS**
+# Outras configurações
+```
+#Editor padrão
+$ git config --global core.editor SeuEditor
+
+#Adicionar templete para commit
+$ git config --global commit.templete ~/SeuTemplete.txt
+
+#Usar saída colorida
+$ git config color.ui true
+
+#Exibir log em apenas uma linha por commit
+$ git config format.pretty oneline
+```
+&nbsp;
+
+> Git é case insensitive Pessoa == PESSOA
+`$ git config --global core.ignorecase false`
+&nbsp;
+
+> Armazenando senha em cache para conexão **HTTPS**
 
 ```
 # Armazena em cache
 $ git config --global credential.helper cache
 
-# Define tempo para manter senha em cache
-# 3600 == 1h
+# Define tempo para manter senha em cache em seg
 $ git config --global credential.helper 'cache --timeout=3600'
 ```
+&nbsp;
 
-## Gerar chave ssh
+# Gerar chave ssh
 
 ```
-$ ssh-keygen -t rsa -b 4096 -C "meuemail@servidor.com"
-Generating public/private rsa key pair.
-Enter file in which to save the key (/home/leandro/.ssh/id_rsa):
+$ ssh-keygen -t rsa -b 4096 -C "seuemail@servidor.com"
 
-# Pressione Enter
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/user/.ssh/id_rsa):
+
+#Pressione Enter
 
 Enter passphrase (empty for no passphrase):
 
-# Digite a senha para sua chave ou deixe em branco, pressionando Enter
+#Digite a senha para sua chave ou deixe em branco, pressionando Enter
 
 Enter same passphrase again:
 
-# Digite a senha anterior
+#Digite a senha anterior
 ```
 
 Copie conteúdo da chave, **id_rsa.pub**, cole em chave ssh no **Github**
@@ -56,11 +73,7 @@ Copie conteúdo da chave, **id_rsa.pub**, cole em chave ssh no **Github**
 Testar comunicação com **servidor**
 
 ```
-# Testar conexão com o servidor
-
 $ ssh -T git@github.com
-
-# Yes, permitir que github seja adicionado a lista de servidores conhecidos
 ```
 
 *****
