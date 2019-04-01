@@ -7,12 +7,22 @@ $ git init
 #Adicionar informações de usuário
 $ git config --global user.name "Seu nome"
 $ git config --global user.email "seu@email.com"
+```
+&nbsp;
 
-#Configurar editor padrão
+# Configurar repositório
+```
+#Editor padrão
 $ git config --global core.editor SeuEditor
 
 #Adicionar templete para commit
 $ git config --global commit.templete ~/SeuTemplete.txt
+
+#Usar saída colorida
+$ git config color.ui true
+
+#Exibir log em apenas uma linha por commit
+$ git config format.pretty oneline
 ```
 &nbsp;
 
