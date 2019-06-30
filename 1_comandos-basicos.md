@@ -120,3 +120,8 @@ $ git reset --hard
 $ git revert --no-edit xxxxx 
 
 ```
+
+### Remover branch
+**Local:**`git branch NomeDaBranch -D`
+
+**Remoto:**`git push origin --delete NomeDaBranch`
